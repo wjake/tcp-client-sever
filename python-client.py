@@ -9,9 +9,11 @@ def tcp_client():
         s.connect((host, port)) # Connect to the server
         
         # Send data
-        message = 'Message' # Message to send
+        message = 'Hand Gesture 1' # Message to send
         s.sendall(message.encode())
         
         # Receive confirmation response from the server
         data = s.recv(1024)
         print('Received from server:', data.decode())
+
+tcp_client()
